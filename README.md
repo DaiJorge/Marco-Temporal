@@ -4,15 +4,16 @@
 
 ### **Highlights**
 
-Indigenous lands are as effective as conservation units in protecting endangered species and climate change mitigation.
+-   Indigenous lands are as effective as conservation units in protecting endangered species and climate change mitigation.
 
-The demarcation and protection of Indigenous lands guarantee Indigenous people's constitutional rights.
+-   The demarcation and protection of Indigenous lands guarantee Indigenous people's constitutional rights.
 
-The legal uncertainty in indigenous lands threatens biodiversity conservation, especially in the Amazon's arc of deforestation.
+-   The legal uncertainty in indigenous lands threatens biodiversity conservation, especially in the Amazon's arc of deforestation.
 
-Demarcating Indigenous lands helps Brazil meet international biodiversity conservation and climate change agreements.
+-   Demarcating Indigenous lands helps Brazil meet international biodiversity conservation and climate change agreements.
 
 Amazon's Indigenous lands effectively protect threatened terrestrial vertebrate species.
+
 
 ![Graphical abstract](Image/Graphical-abstract.png)
 
