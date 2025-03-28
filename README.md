@@ -12,8 +12,7 @@
 
 -   Demarcating Indigenous lands helps Brazil meet international biodiversity conservation and climate change agreements.
 
-Amazon's Indigenous lands effectively protect threatened terrestrial vertebrate species.
-
+-   Amazon's Indigenous lands effectively protect threatened terrestrial vertebrate species.
 
 ![Graphical abstract](Image/Graphical-abstract.png)
 
