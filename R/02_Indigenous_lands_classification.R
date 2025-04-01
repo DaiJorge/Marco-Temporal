@@ -8,18 +8,18 @@ url = html_nodes(terras, "table[class='table table-striped tablesorter']") %>%
   html_attr("href")
 
 # built a dataframe with the HTML information
-ti = html_table(terras)
-ti = as.data.frame(ti[[1]])
+TI = html_table(terras)
+TI = as.data.frame(TI[[1]])
 
 
 # automation to save information
 n = length(url)
 
 #choosing the HTML variables of interest
-ti$Estagio = vector(mode = "character",length = n)
-ti$Publicacao = vector(mode = "character",length = n)
-ti$p_declarada_publ = vector(mode = "character",length = n)
-ti$p_homologada_publ = vector(mode = "character",length = n)
+TI$Estagio = vector(mode = "character",length = n)
+TI$Publicacao = vector(mode = "character",length = n)
+# TI$p_declarada_publ = vector(mode = "character",length = n)
+# TI$p_homologada_publ = vector(mode = "character",length = n)
 
 
 # loop to collect all variables of interest
@@ -33,7 +33,7 @@ for (i in 1:n)  {
   rec =  html_nodes(ti, "table[class='table table-striped tablesorter tableexport']") %>% 
     html_table()
   
-  #data from declared indigenous territories
+#data from declared indigenous territories 
   g = as.data.frame(rec[[2]])
   g$Publicação = strptime(as.character(g$Publicação), "%d/%m/%Y")
   
@@ -48,9 +48,9 @@ for (i in 1:n)  {
   }
   
   h[,2] = as.character(h[,2])
-  ti[i,6:7] = h
+  TI[i,6:7] = h
   
 };rm(i)
 
 
-ti = ti %>% mutate(classe = NA)
+TI = TI %>% mutate(classe = NA)
