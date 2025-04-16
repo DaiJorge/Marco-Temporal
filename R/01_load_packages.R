@@ -8,10 +8,13 @@ ipak <- function(pkg){
   sapply(pkg, require, character.only = TRUE)
 }
 
-ipak(c("rvest", "tidyverse", "terra", "dplyr", "ggplot2", "sf", "graphics"))
+ipak(c("rvest", "tidyverse", "terra", "dplyr", "ggplot2", "sf", "graphics",
+       "png", "grid",  "rnaturalearth", "rnaturalearthdata", 
+       "rnaturalearthhires", "geobr", "gridGraphics", "gridExtra", "tmap", "ggspatial"))
 
 rm(ipak)
 
 if (!"devtools"%in%installed.packages()){install.packages("devtools")}  
 devtools::install_github("andrefaa/ENMTML") 
+
 library(ENMTML)
