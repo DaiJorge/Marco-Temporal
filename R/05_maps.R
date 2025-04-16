@@ -237,5 +237,72 @@ fig2 = rebar + annotation_custom(legenda, xmin = -72,
 
 
 ggsave("fig2.jpg", fi, height = 10, width = 20, dpi = 300)
+cb = rast("c.tif")
+cb[cb == 0] = NA
+
+
+tm_shape(estados) +
+  tm_sf(col =   "white") +
+  tm_shape(cb) +
+  tm_raster(pal = "-viridis", style = "cont") + 
+  tm_shape(uc) +
+  tm_raster(pal = "-viridis", style = "cont") +
+  tm_facets () +
+  tm_layout(scale = .5, legend.position = c(0.7, 0), frame = FALSE) +
+  tm_compass(position = c("right", "top"), size = 2) +
+  tm_scale_bar(position = c("left", "bottom"), text.size = 0.6)
+# RASTER DE CARBONO NAS UNIDADES DE CONSERVAÇÃO ---------------------------
+
+
+uc = rast("rasunidades.tif")
+uc[uc == 0] = NA
+
+tm_shape(estados) +
+  tm_sf(col = "white") +
+  tm_shape(uc) + 
+  tm_raster(pal = "-viridis", style = "cont") + 
+  tm_layout(legend.show = FALSE, frame = FALSE)
+
+tm_shape(estados) +
+  tm_sf(col = "white") +
+  tm_shape(uc) + 
+  tm_raster(pal = "-viridis", style = "cont", 
+            title = "Estoque de Carbono") + 
+  tm_layout( frame = FALSE, legend.position = c(0.8, 0),
+             legend.text.fontfamily = "serif")
+b =  grid.grab()
+
+
+
+tm_shape(estados) +
+  tm_sf(col = "white") +
+  tm_shape(ti) + 
+  tm_raster(pal = "-viridis", style = "cont") + 
+  tm_layout(legend.show = FALSE, frame = FALSE) 
+ti =  grid.grab()
+
+tm_shape(estados) +
+  tm_sf(col =   "white") +
+  tm_shape(uc) +
+  tm_raster(pal = "-viridis", style = "cont",
+            title = "Estoque de Carbono") +
+  
+  tm_layout(scale = .67, legend.position = c(0.7, 0), 
+            frame = FALSE) 
+
+
+
+# RASTER DE CARBONO NAS TERRAS INDÍGENAS ----------------------------------
+
+
+ti = rast("r.tif")
+ti[ti == 0] = NA
+tm_shape(estados) +
+  tm_sf(col =   "white") +
+  tm_shape(ti) +
+  tm_raster(pal = "-viridis", style = "cont") +
+  tm_facets () +
+  tm_layout(scale = .5, legend.position = c(0.7, 0), 
+            frame = FALSE) 
 
 
